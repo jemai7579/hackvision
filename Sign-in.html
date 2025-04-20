@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VESOS-Chat - Sign In</title>
+    <meta name="description" content="Sign in to VESOS-Chat to access your AI assistant">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="heading">Sign In</h1>
+        
+        <!-- Modified form with JavaScript handling -->
+        <form class="form" id="loginForm">
+            <div class="input-group">
+                <label for="email" class="sr-only">Email</label>
+                <input required class="input" type="email" name="email" id="email" placeholder="Email" autocomplete="username">
+            </div>
+            
+            <div class="input-group">
+                <label for="password" class="sr-only">Password</label>
+                <input required class="input" type="password" name="password" id="password" placeholder="Password" autocomplete="current-password">
+            </div>
+            
+            <div class="input-group">
+                <label for="confirm-password" class="sr-only">Verification Code</label>
+                <input class="input" type="password" name="verification-code" id="confirm-password" placeholder="Verification Code" autocomplete="one-time-code">
+            </div>
+            
+            <div class="forgot-password">
+                <a href="/forgot-password" aria-label="Reset your password">Forgot Password?</a>
+            </div>
+            
+            <button type="submit" class="login-button">Sign In</button>
+        </form>
+        
+        <!-- Social login section remains the same -->
+
+        
+        <div class="footer-links">
+            <p>Don't have an account? <a href="Sign-up.html">Sign up</a></p>
+        </div>
+    </main>
+
+    <!-- JavaScript to handle form submission -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Here you would typically validate the form and send data to a server
+            // For this example, we'll just redirect after a short delay
+            
+            // Show loading state (optional)
+            const submitButton = document.querySelector('.login-button');
+            submitButton.textContent = 'Signing in...';
+            submitButton.disabled = true;
+            
+            // Simulate authentication process
+            setTimeout(function() {
+                // Redirect to index.html after successful "authentication"
+                window.location.href = 'index.html';
+            }, 1000); // 1 second delay to simulate network request
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VESOS-Chat</title>
+    <!-- Always include a description for SEO and accessibility -->
+    <meta name="description" content="VESOS Chat - Your personal AI assistant">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mobile menu toggle button -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    
+    <!-- Side menu navigation -->
+    <nav class="side-menu" id="sideMenu">
+        <div class="menu-header">
+            <!-- Logo with proper alt text -->
+            <div class="app-name">
+                <img src="/images/logo-removebg-preview.png" alt="VESOS Chat Logo" height="70" width="200">
+            </div>
+            <button class="close-menu" id="closeMenu" aria-label="Close menu">×</button>
+        </div>
+        
+        <!-- New chat button -->
+        <button class="new-chat-btn" id="newChatBtn">
+            <span>+</span> New chat
+        </button>
+        
+        <!-- Chat history sections -->
+        <div class="menu-items">
+            <div class="menu-section">
+                <h3>Today</h3>
+                <div class="menu-item active" data-section="chat">
+                    <span>Current Conversation</span>
+                </div>
+            </div>
+            
+            <div class="menu-section">
+                <h3>Yesterday</h3>
+                <div class="menu-item" data-section="chat">
+                    <span>Technical Questions</span>
+                </div>
+                <div class="menu-item" data-section="chat">
+                    <span>Account Help</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer with user actions -->
+        <div class="menu-footer">
+            <div class="footer-item" id="settingsBtn" data-section="settings" role="button" tabindex="0">
+                <span>Settings</span>
+            </div>
+            <div class="footer-item" id="contactBtn" data-section="contact" role="button" tabindex="0">
+                <span>Contact us</span>
+            </div>
+            <div class="footer-item" id="logoutBtn" data-section="logout" role="button" tabindex="0">
+                <span>Log out</span>
+            </div>
+            <div class="profile-section" id="profileBtn" data-section="profile" role="button" tabindex="0">
+                <div class="profile-info">
+                    <div class="profile-name">Hamza Jemai</div>
+                    <div class="profile-email">jemai7579@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main content area with different sections -->
+    <main class="main-content" id="mainContent">
+        <!-- Chat Section (default active section) -->
+        <section class="content-section active" id="chatSection">
+            <div class="chat-container">
+                <div class="message-history" id="messageHistory">
+                    <div class="message bot-message">
+                        Hello! I'm your VESOS assistant. How can I help you today?
+                    </div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="messageInput" placeholder="Type your message..." autocomplete="off" aria-label="Type your message">
+                    <button id="sendBtn">Send</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Settings Section -->
+        <section class="content-section" id="settingsSection">
+            <h2>Settings</h2>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label for="themeSelect">Theme</label>
+                    <select id="themeSelect">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="system">System</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="notificationsToggle">Notification</label>
+                    <input type="checkbox" id="notificationsToggle" checked>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="content-section" id="contactSection">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <p>Email: <a href="mailto:parrainage.enfants@sos-tunisie.org">parrainage.enfants@sos-tunisie.org</a></p>
+                <p>Phone: <a href="tel:+216 58 371 002">+216 58 371 002</a></p>
+                <p> Notre Platform :</p> <a href="https://www.sosve.tn/">sosve.tn</a>
+            </div>
+        </section>
+        
+        <!-- Profile Section -->
+        <section class="content-section" id="profileSection">
+            <h2>My Profile</h2>
+            <div class="profile-content">
+                <div class="profile-pic-large">
+                    <img src="/images/images.jpeg" height="100" width="100" alt="Profile picture">
+                </div>
+                <div class="profile-info">
+                    <p><strong>Name:</strong> Hamza Jemai</p>
+                    <p><strong>Email:</strong> jemai7579@gmail.com</p>
+                    <p><strong>Member since:</strong> 20/04/2025</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Logout Section -->
+        <section class="content-section" id="logoutSection">
+            <h2>Log Out</h2>
+            <div class="logout-content">
+                <p>Are you sure you want to log out?</p>
+                <button class="confirmLogout">Confirm Logout</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
