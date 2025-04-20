@@ -572,3 +572,37 @@
   color: white;
   border-color: rgba(28, 10, 115, 0.3);
 }
+.profile-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  height: 100%;
+  margin-left: 25%;
+  padding: 2rem;
+  border-radius: 0 0 12rem 0;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.15);
+  background-image: white;   
+  color: #2d3748;
+  border: 1px solid rgba(0, 191, 255, 0.2);
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+.profile-content p {
+  color: #3748ca;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+.profile-content:hover {
+  box-shadow: 0 6px 25px rgba(255, 10, 10, 0.2);
+  border-color: rgba(218, 36, 36, 0.3);
+}
+.profile-content p strong{
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
